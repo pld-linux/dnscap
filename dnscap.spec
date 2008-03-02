@@ -5,7 +5,7 @@ Summary(pl.UTF-8):	Zamiennik tcpdumpa dla ruchu DNS
 Name:		dnscap
 Version:	0.%{_snap}
 Release:	1
-License:	ISC
+License:	BSD-like/distributable
 Group:		Applications/Networking
 Source0:	%{name}-%{_snap}.tar.gz
 # Source0-md5:	e5451875e01551568e46a3c461641311
