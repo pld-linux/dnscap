@@ -6,7 +6,7 @@ Name:		dnscap
 Version:	0.%{_snap}
 Release:	1
 License:	BSD-like/distributable
-Group:		Applications/Networking
+Group:		Networking/Utilities
 Source0:	%{name}-%{_snap}.tar.gz
 # Source0-md5:	e5451875e01551568e46a3c461641311
 URL:		http://public.oarci.net/tools/dnscap/
