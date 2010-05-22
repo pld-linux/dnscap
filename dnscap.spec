@@ -11,6 +11,8 @@ Source0:	%{name}-%{_snap}.tar.gz
 # Source0-md5:	e5451875e01551568e46a3c461641311
 URL:		http://public.oarci.net/tools/dnscap/
 BuildRequires:	bind-devel
+BuildRequires:	groff
+BuildRequires:	libpcap-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -22,7 +24,10 @@ expected to be used for gathering continuous research or audit traces.
 
 %build
 %{__make} \
-	PORTCFLAGS="%{rpmcflags}" \
+	BINDLIB="-lbind9" \
+	PORTCFLAGS="%{rpmcppflags} %{rpmcflags}" \
+	PORTLDFLAGS="%{rpmldflags}" \
+	GCCWARN="-Wall" \
 	CDEBUG=""
 
 %install
